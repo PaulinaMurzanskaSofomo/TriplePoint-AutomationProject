@@ -1,25 +1,5 @@
-from typing import TypedDict
 
-
-class User(TypedDict):
-    title: str
-    name: str
-    last_name: str
-    personal_FCA: str
-    company_name: str
-    company_FCA: str
-    email: str
-    password: str
-    personal_tel: str
-    office_tel: str
-    postcode: str
-    street: str
-    city: str
-    county: str
-    country: str
-
-
-NEW_USER_TO_REGISTER: User = dict(
+NEW_USER_TO_REGISTER = dict(
         title="Mr",
         name="John",
         last_name="Smithson",
