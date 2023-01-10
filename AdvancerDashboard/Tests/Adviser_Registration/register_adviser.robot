@@ -12,7 +12,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Register New User With Success
-    [Documentation]   Test No 1: Register a new Adviser and check if the person 's
+    [Documentation]   *Test No 1*: Register a new Adviser and check if the person 's
     ...    account was created properly.
     [Tags]
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER}
@@ -21,7 +21,7 @@ Register New User With Success
 
 
 Register With Errors
-    [Documentation]   Test No 2: Register a new Adviser. Fill the form with
+    [Documentation]   *Test No 2*: Register a new Adviser. Fill the form with
     ...    incorrect data and check validation
     [Tags]
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER_INCORRECT_DATA}

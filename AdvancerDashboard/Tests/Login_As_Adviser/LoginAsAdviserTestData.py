@@ -2,12 +2,12 @@
 
 NEW_CLIENT = dict(
     title="Miss",
-    name="Paulina60",
+    name="Paulina61",
     middle_name="Weronika",
-    last_name="Murzanska60",
+    last_name="Murzanska61",
     gender="Female",
     insurance_no="AA128845A",
-    email="p.murzanska60@gmail.com",
+    email="p.murzanska61@gmail.com",
     tel_no="+44 009 999 998",
     bank_account="43456714",
     sort_code="123456",
@@ -22,12 +22,12 @@ NEW_CLIENT = dict(
 )
 NEW_CLIENT_2 = dict(
     title="Miss",
-    name="Paulina61",
+    name="Paulina62",
     middle_name="Weronika",
-    last_name="Murzanska61",
+    last_name="Murzanska62",
     gender="Female",
     insurance_no="AA128845A",
-    email="p.murzanska61@gmail.com",
+    email="p.murzanska62@gmail.com",
     tel_no="+44 009 999 998",
     bank_account="43456714",
     sort_code="123456",

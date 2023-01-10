@@ -5,14 +5,14 @@ Documentation     Refer a new client
 Library           SeleniumLibrary
 Resource          ../../Resources/CommonResources/CommonKeywords.robot
 Resource          ../../Resources/PageObjects/FinancialAdviserPortal/ReferNewClient/ReferNewClient.robot
-Variables    ./LoginAsAdviserTestData.py
+Variables         ./LoginAsAdviserTestData.py
 
 Test Setup        CommonKeywords.Open Browser And Login To Advancer Dashboard
 Test Teardown     close browser
 
 *** Test Cases ***
 Refer New Client - Introducing
-    [Documentation]   Test No 3 : Refer a new client with option Introducing.
+    [Documentation]   *Test No 3*: Refer a new client with option Introducing.
     ...    Check if a new client was created properly, with introducing investment
     [Tags]
     ReferNewClient.Wait Untill Dashboard Loads
@@ -33,7 +33,7 @@ Refer New Client - Introducing
 
 
 Refer New Client - Advising
-    [Documentation]    Test No 4: Refer a new client with option Advising.
+    [Documentation]    *Test No 4*: Refer a new client with option Advising.
     ...    Check if a new client was created properly with advising investment.
 
     [Tags]
