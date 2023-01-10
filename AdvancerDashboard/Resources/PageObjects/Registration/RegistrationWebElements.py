@@ -50,3 +50,9 @@ SUBMIT_REGISTRATION_LINK = 'xpath://*[' \
 REGISTERED_FORM_SUCCESS_DIV = 'id:verificationPage:advRegTemplate:j_id109:j_id111'
 REGISTRATION_SUCCESS_INFO = 'xpath://*[@id="verificationPage:advRegTemplate' \
                                 ':j_id109:j_id111"]/div/table/tbody/tr/td[1]/div[2] '
+
+# Form error
+
+ERROR_MESSAGE_CONTAINER = 'id:Registration:advRegTemplate:j_id92:j_id93:j_id94'
+ERROR_INDICATOR = 'xpath://*[@id="Registration:advRegTemplate:j_id92:j_id93' \
+                  ':j_id113"]/span[2]'

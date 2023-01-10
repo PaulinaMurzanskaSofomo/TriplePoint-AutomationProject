@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 
 Variables    ./ReferNewClientWebElements.py
 
@@ -69,8 +70,6 @@ Add Tax Residency (new_client)
         click element    ${NON_UK_TAX_RESIDENCY_RADIO}
     END
 
-
-
 Complete Text Fields (new_client)
     [Arguments]    ${new_client}
     wait until page contains element   ${NAME_INPUT}
@@ -87,21 +86,66 @@ Click Next
     click element    ${NEXT_BUTTON}
 
 Click Introduce
-  click element    ${INTRODUCING_BUTTON}
+   wait until page contains element  ${INTRODUCING_BUTTON}
+    click element    ${INTRODUCING_BUTTON}
+    sleep    5s
 
 Click Submit
-  click element    ${SUBMIT_BUTTON}
+    mouse over    ${SUBMIT_BUTTON}
+    sleep    1s
+    press keys    ${SUBMIT_BUTTON}    RETURN
 
-
-#Send Email Invite    - this block needs to be resolved, the direct element is not
-#                        clickable
-#    click element    ${SEND_EMAIL_INVITE_BUTTON}
-#    sleep    10s
+Send Email Invite
+    [Arguments]  ${user}
+    wait until page contains     Dear ${user["name"]}
+    mouse over    ${SEND_EMAIL_INVITE_BUTTON}
+    press keys   ${SEND_EMAIL_INVITE_BUTTON}    RETURN
 
 Click Back To Dashboard
-   wait until page contains element    ${SEND_INVITE_SUCCESS_MODAL}
    click link    ${BACK_TO_DASHBOARD_LINK}
+   sleep    3s
 
-# Remaining keywords to write in this scope
-# - Check if client is visible on the list of existing clients
-# - Log out form the account
+
+
+# ADVISING
+
+Click Advising
+    wait until page contains element    ${ADVISING_BUTTON}
+    click element    ${ADVISING_BUTTON}
+    wait until element is visible    ${INVESTOR_TYPE_SELECT}
+
+Fill Advising Form And Submit
+    select from list by index    ${INVESTOR_TYPE_SELECT}    1
+    select from list by index    ${TAX_WRAPPER_SELECT}    1
+    select from list by value    ${PAYMENT_METHOD_SELECT}    Bank transfer
+    input text    ${INITIAL_INVESTMENT_INPUT}   12000
+    select from list by value    ${SERVICE_DURATION_SELECT}    2 years
+    select from list by value    ${INCOME_FREQUENCY_SELECT}    Monthly
+    input text    ${INITIAL_ADVISER_CHARGE_INPUT}    10
+    sleep    2s
+    mouse over    ${SUBMIT_ADVISING_LINK}
+    press keys    ${SUBMIT_ADVISING_LINK}    RETURN
+    sleep    5s
+
+
+
+
+
+
+
+
+#
+#Verify File Download
+#    ${chrome options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+#    ${prefs}  Create Dictionary
+#    ...  download.default_directory=/Users/paulinamurzanska/Desktop/TriplePoint
+#    ...    -Automation/TriplePoint-TestingApplication/AdvancerDashboard/Downloads
+#    Call Method  ${chrome options}  add_experimental_option  prefs  ${prefs}
+#    Create Webdriver  Chrome  chrome_options=${chrome options}
+#    Click Link  ${DOWNLOAD_LINK}
+#    Sleep  5s
+#    ${files}  list files in directory    /Users/paulinamurzanska/Desktop/TriplePoint-Automation/TriplePoint-TestingApplication/AdvancerDashboard/Downloads
+#    Length Should Be  ${files}  1
+
+
+

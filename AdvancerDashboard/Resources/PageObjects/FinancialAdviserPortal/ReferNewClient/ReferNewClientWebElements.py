@@ -56,9 +56,26 @@ NEXT_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id121"]/div[1]/div[4]/div '
 INTRODUCING_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
                      '4]/div[2]/div[2]'
 SUBMIT_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
-               '5]/div/div[2]'
+                '5]/div/div[2]/a'
+SEND_EMAIL_INVITE_BUTTON = 'xpath://html/body/div[3]/div/a'
+BACK_TO_DASHBOARD_LINK = "xpath://html/body/div[4]/div/p[3]/a"
+SEND_INVITE_SUCCESS_MODAL = 'xpath://html/body/div[4]/div'
 
-SEND_EMAIL_INVITE_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[' \
-                           '1]/div[5]/div/div[2]'
-BACK_TO_DASHBOARD_LINK = "xpath:/html/body/div[4]/div/p[3]/a"
-SEND_INVITE_SUCCESS_MODAL = 'xpath:/html/body/div[4]/div'
+
+# ADVISING
+ADVISING_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
+                  '4]/div[1]/div[2]'
+ADVISING_FORM = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[6]'
+PRODUCT_TYPE_SELECT = 'id:j_id0:advRegTemplate:j_id114:productType'
+INVESTOR_TYPE_SELECT = 'id:j_id0:advRegTemplate:j_id114:investorType'
+TAX_WRAPPER_SELECT = 'id:j_id0:advRegTemplate:j_id114:taxwrapper'
+INITIAL_INVESTMENT_INPUT = 'id:j_id0:advRegTemplate:j_id114:initInvestment'
+PAYMENT_METHOD_SELECT = 'id:j_id0:advRegTemplate:j_id114:payment'
+SERVICE_DURATION_SELECT = 'id:j_id0:advRegTemplate:j_id114:serviceDuration'
+INCOME_FREQUENCY_SELECT = 'id:j_id0:advRegTemplate:j_id114:serviceType'
+INITIAL_ADVISER_CHARGE_INPUT = 'id:j_id0:advRegTemplate:j_id114:feePercent'
+SUBMIT_ADVISING_LINK = 'id:j_id0:advRegTemplate:j_id114:nonIsaRefer'
+AUTHORISATION_FORM = "xpath://html/body/div[5]/div"
+DOWNLOAD_LINK = "xpath://html/body/div[5]/div/a[1]"
+BACK_TO_REFER_CLIENT_PAGE_LINK = 'xpath://html/body/div[5]/div/a[2]'
+SEND_EMAIL_INVITE_FROM_ADVISING = 'xpath://html/body/div[2]/div/a'

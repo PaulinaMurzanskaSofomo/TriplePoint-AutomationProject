@@ -51,3 +51,7 @@ Validate If Registration Success (success_message)
     [Arguments]    ${success_message}
     wait until page contains element    ${REGISTERED_FORM_SUCCESS_DIV}
     element should contain    ${REGISTRATION_SUCCESS_INFO}    ${success_message}
+
+Validate If Error Message Shows Up
+    page should contain element    ${ERROR_MESSAGE_CONTAINER}
+    element should contain   ${ERROR_INDICATOR}  Error:

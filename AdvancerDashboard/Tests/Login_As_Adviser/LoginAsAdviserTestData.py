@@ -2,12 +2,12 @@
 
 NEW_CLIENT = dict(
     title="Miss",
-    name="Paulina29",
+    name="Paulina60",
     middle_name="Weronika",
-    last_name="Murzanska29",
+    last_name="Murzanska60",
     gender="Female",
     insurance_no="AA128845A",
-    email="p.murzanska29@gmail.com",
+    email="p.murzanska60@gmail.com",
     tel_no="+44 009 999 998",
     bank_account="43456714",
     sort_code="123456",
@@ -18,6 +18,25 @@ NEW_CLIENT = dict(
     country="United Kingdom",
     date_of_birth='08/03/1987',
     is_uk_resident=True,
-    tax_return_abroad=False
+    tax_return_abroad=False,
 )
-
+NEW_CLIENT_2 = dict(
+    title="Miss",
+    name="Paulina61",
+    middle_name="Weronika",
+    last_name="Murzanska61",
+    gender="Female",
+    insurance_no="AA128845A",
+    email="p.murzanska61@gmail.com",
+    tel_no="+44 009 999 998",
+    bank_account="43456714",
+    sort_code="123456",
+    postcode="HD9 9PH",
+    street="8 Zoe Motorway",
+    city="Port Alice",
+    county="Port Julie",
+    country="United Kingdom",
+    date_of_birth='08/03/1987',
+    is_uk_resident=True,
+    tax_return_abroad=False,
+)
