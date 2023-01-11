@@ -11,8 +11,8 @@ Test Setup    CommonKeywords.Open And Maximize Browser (args:url,browser)
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Register New User With Success
-    [Documentation]   *Test No 1*: Register a new Adviser and check if the person 's
+Test No 1 - Register New User With Success
+    [Documentation]   Register a new Adviser and check if the person 's
     ...    account was created properly.
     [Tags]    robot:skip
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER}
@@ -20,8 +20,8 @@ Register New User With Success
     Registration.Validate If Registration Success (success_message)    ${REGISTER_SUCCESS_MESSAGE}
 
 
-Register With Errors
-    [Documentation]   *Test No 2*: Register a new Adviser. Fill the form with
+Test No 1 - Register With Errors
+    [Documentation]    Register a new Adviser. Fill the form with
     ...    incorrect data and check validation
     [Tags]    robot:skip
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER_INCORRECT_DATA}
