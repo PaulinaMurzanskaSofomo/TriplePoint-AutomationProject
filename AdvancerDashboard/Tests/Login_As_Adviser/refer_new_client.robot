@@ -40,6 +40,7 @@ Test No 4 - Refer New Client - Advising
 
     [Tags]
     DashboardDropdownMenu.Wait Untill Dashboard Loads
+    ${initial_number_of_clients}=    get element count    class:panel-heading
     ReferNewClient.Click Refer New Client
     ReferNewClient.Complete New Client Form (new_client)    ${NEW_CLIENT_2}
     ReferNewClient.Click Next

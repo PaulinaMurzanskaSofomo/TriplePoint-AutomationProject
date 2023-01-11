@@ -12,7 +12,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Test No 1 - Register New User With Success
-    [Documentation]   Register a new Adviser and check if the person 's
+    [Documentation]   Register new Adviser and check if the person 's
     ...    account was created properly.
     [Tags]    robot:skip
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER}
@@ -21,7 +21,7 @@ Test No 1 - Register New User With Success
 
 
 Test No 1 - Register With Errors
-    [Documentation]    Register a new Adviser. Fill the form with
+    [Documentation]    Register new Adviser. Fill the form with
     ...    incorrect data and check validation
     [Tags]    robot:skip
     Registration.Complete Registration Form (user)    ${NEW_USER_TO_REGISTER_INCORRECT_DATA}
