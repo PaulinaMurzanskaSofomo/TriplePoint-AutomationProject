@@ -65,9 +65,9 @@ Add UK Residency (new_client)
 Add Tax Residency (new_client)
     [Arguments]    ${new_client}
     IF    ${new_client["tax_return_abroad"]}
-        click element    ${UK_TAX_RESIDENCY_RADIO}
-    ELSE
         click element    ${NON_UK_TAX_RESIDENCY_RADIO}
+    ELSE
+        click element    ${UK_TAX_RESIDENCY_RADIO}
     END
 
 Complete Text Fields (new_client)
