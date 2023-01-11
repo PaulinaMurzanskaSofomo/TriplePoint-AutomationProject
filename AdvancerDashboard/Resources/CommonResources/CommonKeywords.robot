@@ -17,3 +17,8 @@ Open Browser And Login To Advancer Dashboard
     input text    ${LOGIN_PASSWORD_INPUT}    ${DEMO_USER["password"]}
     mouse over    ${LOGIN_BUTTON}
     click element    ${LOGIN_BUTTON}
+
+Check If Error Message Appears (error_container,error_indicator)
+    [Arguments]    ${error_container}    ${error_indicator}
+    page should contain element    ${error_container}
+    element should contain    ${error_indicator}    Error:

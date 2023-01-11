@@ -5,13 +5,13 @@ Library    OperatingSystem
 Variables    ./ReferNewClientWebElements.py
 
 *** Keywords ***
-Wait Untill Dashboard Loads
-    wait until page contains element    ${REFER_NEW_CLIENT_BUTTON}
+#Wait Untill Dashboard Loads
+#    wait until page contains element    ${REFER_NEW_CLIENT_BUTTON}
 
 Click Refer New Client
-    wait until page contains element    ${REFER_NEW_CLIENT_BUTTON}
-    mouse over    ${REFER_NEW_CLIENT_BUTTON}
-    click element    ${REFER_NEW_CLIENT_BUTTON}
+    wait until page contains element    ${REFER_NEW_CLIENT}
+    mouse over    ${REFER_NEW_CLIENT}
+    click element    ${REFER_NEW_CLIENT}
 
 Complete New Client Form (new_client)
     [Arguments]    ${new_client}
@@ -85,16 +85,6 @@ Complete Text Fields (new_client)
 Click Next
     click element    ${NEXT_BUTTON}
 
-Click Introduce
-   wait until page contains element  ${INTRODUCING_BUTTON}
-    click element    ${INTRODUCING_BUTTON}
-    sleep    5s
-
-Click Submit
-    mouse over    ${SUBMIT_BUTTON}
-    sleep    1s
-    press keys    ${SUBMIT_BUTTON}    RETURN
-
 Send Email Invite
     [Arguments]  ${user}
     wait until page contains     Dear ${user["name"]}
@@ -104,32 +94,6 @@ Send Email Invite
 Click Back To Dashboard
    click link    ${BACK_TO_DASHBOARD_LINK}
    sleep    3s
-
-
-
-# ADVISING
-
-Click Advising
-    wait until page contains element    ${ADVISING_BUTTON}
-    click element    ${ADVISING_BUTTON}
-    wait until element is visible    ${INVESTOR_TYPE_SELECT}
-
-Fill Advising Form And Submit
-    select from list by index    ${INVESTOR_TYPE_SELECT}    1
-    select from list by index    ${TAX_WRAPPER_SELECT}    1
-    select from list by value    ${PAYMENT_METHOD_SELECT}    Bank transfer
-    input text    ${INITIAL_INVESTMENT_INPUT}   12000
-    select from list by value    ${SERVICE_DURATION_SELECT}    2 years
-    select from list by value    ${INCOME_FREQUENCY_SELECT}    Monthly
-    input text    ${INITIAL_ADVISER_CHARGE_INPUT}    10
-    sleep    2s
-    mouse over    ${SUBMIT_ADVISING_LINK}
-    press keys    ${SUBMIT_ADVISING_LINK}    RETURN
-    sleep    5s
-
-
-
-
 
 
 

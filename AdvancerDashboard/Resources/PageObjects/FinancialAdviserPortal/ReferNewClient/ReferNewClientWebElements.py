@@ -1,4 +1,4 @@
-REFER_NEW_CLIENT_BUTTON = 'xpath://*[@id="thePage:advRegTemplate:j_id116"]/div[' \
+REFER_NEW_CLIENT = 'xpath://*[@id="thePage:advRegTemplate:j_id116"]/div[' \
                           '2]/div[4]'
 # Refer new client form
 
@@ -39,13 +39,10 @@ ADD_CITY_INPUT = "id:j_id0:advRegTemplate:j_id121:j_id123:1:addressCity"
 ADD_COUNTY_INPUT = "id:j_id0:advRegTemplate:j_id121:j_id123:1:addressCounty"
 ADD_COUNTRY_INPUT = "id:j_id0:advRegTemplate:j_id121:j_id123:1:addressCountry"
 ADD_POSTCODE_INPUT = 'id:j_id0:advRegTemplate:j_id121:j_id123:1:addressPostcode'
-
-
 UK_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126:j_id127' \
                      ':fieldSet:0:j_id142:j_id143:radioSelectFieldId:0'
 NON_UK_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
                          ':j_id127:fieldSet:0:j_id142:j_id143:radioSelectFieldId:1'
-
 UK_TAX_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
                          ':j_id127:fieldSet:1:j_id142:j_id143:radioSelectFieldId:0'
 NON_UK_TAX_RESIDENCY_RADIO ='j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
@@ -53,29 +50,23 @@ NON_UK_TAX_RESIDENCY_RADIO ='j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
 
 # Form submitting steps
 NEXT_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id121"]/div[1]/div[4]/div '
-INTRODUCING_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
-                     '4]/div[2]/div[2]'
-SUBMIT_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
-                '5]/div/div[2]/a'
 SEND_EMAIL_INVITE_BUTTON = 'xpath://html/body/div[3]/div/a'
 BACK_TO_DASHBOARD_LINK = "xpath://html/body/div[4]/div/p[3]/a"
 SEND_INVITE_SUCCESS_MODAL = 'xpath://html/body/div[4]/div'
-
-
-# ADVISING
-ADVISING_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[' \
-                  '4]/div[1]/div[2]'
-ADVISING_FORM = 'xpath://*[@id="j_id0:advRegTemplate:j_id114"]/div[1]/div[6]'
-PRODUCT_TYPE_SELECT = 'id:j_id0:advRegTemplate:j_id114:productType'
-INVESTOR_TYPE_SELECT = 'id:j_id0:advRegTemplate:j_id114:investorType'
-TAX_WRAPPER_SELECT = 'id:j_id0:advRegTemplate:j_id114:taxwrapper'
-INITIAL_INVESTMENT_INPUT = 'id:j_id0:advRegTemplate:j_id114:initInvestment'
-PAYMENT_METHOD_SELECT = 'id:j_id0:advRegTemplate:j_id114:payment'
-SERVICE_DURATION_SELECT = 'id:j_id0:advRegTemplate:j_id114:serviceDuration'
-INCOME_FREQUENCY_SELECT = 'id:j_id0:advRegTemplate:j_id114:serviceType'
-INITIAL_ADVISER_CHARGE_INPUT = 'id:j_id0:advRegTemplate:j_id114:feePercent'
-SUBMIT_ADVISING_LINK = 'id:j_id0:advRegTemplate:j_id114:nonIsaRefer'
 AUTHORISATION_FORM = "xpath://html/body/div[5]/div"
 DOWNLOAD_LINK = "xpath://html/body/div[5]/div/a[1]"
 BACK_TO_REFER_CLIENT_PAGE_LINK = 'xpath://html/body/div[5]/div/a[2]'
 SEND_EMAIL_INVITE_FROM_ADVISING = 'xpath://html/body/div[2]/div/a'
+
+
+# REFER NEW CLIENT - VALIDATION CHECK
+ERROR_MESSAGE_CONTAINER = 'id:j_id0:advRegTemplate:j_id93:j_id94:j_id95'
+ERROR_INDICATOR = 'xpath://*[@id="j_id0:advRegTemplate:j_id93:j_id94:j_id114' \
+                 '"]/span[2]'
+
+# ADVISING VALIDATION CHECK
+ADVISING_FORM_ERROR_MESSAGE_CONTAINER = \
+    'id:j_id0:advRegTemplate:j_id86:j_id87:j_id88'
+ADVISING_FORM_ERROR_INDICATOR = 'xpath://*[' \
+                                '@id="j_id0:advRegTemplate:j_id86:j_id87:j_id107' \
+                                '"]/span[2]'
