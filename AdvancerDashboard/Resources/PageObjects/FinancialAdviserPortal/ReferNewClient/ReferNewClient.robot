@@ -5,8 +5,6 @@ Library    OperatingSystem
 Variables    ./ReferNewClientWebElements.py
 
 *** Keywords ***
-#Wait Untill Dashboard Loads
-#    wait until page contains element    ${REFER_NEW_CLIENT_BUTTON}
 
 Click Refer New Client
     wait until page contains element    ${REFER_NEW_CLIENT}
