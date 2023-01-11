@@ -59,7 +59,7 @@ Add UK Residency (new_client)
     IF    ${new_client["is_uk_resident"]}
         click element    ${UK_RESIDENCY_RADIO}
     ELSE
-        click element    ${UK_RESIDENCY_RADIO}
+        click element    ${NON_UK_RESIDENCY_RADIO}
     END
 
 Add Tax Residency (new_client)
