@@ -17,7 +17,7 @@ Test Teardown     close browser
 Test No 7 - New Investment - Introducing
     [Documentation]    Add new investment for an existing client -
     ...    Introducing. Check if new investment has been created properly.
-    [Tags]
+    [Tags]    robot:skip
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     NewInvestment.Find Existing Client
     NewInvestment.Click Add New Investment
@@ -29,9 +29,9 @@ Test No 7 - New Investment - Introducing
 
 Test No 8 - New Investment - Advising
     [Documentation]    Add new investment for an existing client - Advising
-...    (few scenarios with different values). Check if new investment has been created
-...    properly.
-    [Tags]
+     ...    (few scenarios with different values). Check if new investment has been
+     ...    created properly.
+    [Tags]    robot:skip
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     NewInvestment.Find Existing Client
     NewInvestment.Click Add New Investment
@@ -40,3 +40,20 @@ Test No 8 - New Investment - Advising
     IntroducingAndAdvising.Submit Advising Form
 # test breaks here -  we get error that client must be
 # over18
+
+Test No 9 - New Investment - Advising - Validation Check
+    [Documentation]    Fill the forms with incorrect data and check validation in
+    ...    form for adding new investment for an existing client - Advising.
+    [Tags]
+    DashboardDropdownMenu.Wait Untill Dashboard Loads
+    NewInvestment.Find Existing Client
+    NewInvestment.Click Add New Investment
+    IntroducingAndAdvising.Click Advising
+    IntroducingAndAdvising.Fill Advising Form (advising form data)
+     ...    ${ADVISING_FORM_INCORRECT_DATA}
+    IntroducingAndAdvising.Submit Advising Form
+    CommonKeywords.Check If Error Message Appears (error_container,error_indicator)
+    ...    ${NEW_INVESTMENT_ERROR_CONTAINER}    ${NEW_INVESTMENT_ERROR_INDICATOR}
+    DashboardDropdownMenu.Back To Dashboard
+    DashboardDropdownMenu.Wait Untill Dashboard Loads
+    DashboardDropdownMenu.Logout

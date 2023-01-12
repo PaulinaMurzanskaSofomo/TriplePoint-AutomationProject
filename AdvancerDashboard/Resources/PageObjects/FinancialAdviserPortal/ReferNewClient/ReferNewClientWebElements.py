@@ -43,10 +43,11 @@ UK_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126:j_id127'
                      ':fieldSet:0:j_id142:j_id143:radioSelectFieldId:0'
 NON_UK_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
                          ':j_id127:fieldSet:0:j_id142:j_id143:radioSelectFieldId:1'
-UK_TAX_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
+NON_UK_TAX_RESIDENCY_RADIO = 'id:j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
                          ':j_id127:fieldSet:1:j_id142:j_id143:radioSelectFieldId:0'
-NON_UK_TAX_RESIDENCY_RADIO ='j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
+UK_TAX_RESIDENCY_RADIO ='j_id0:advRegTemplate:j_id121:j_id123:3:j_id126' \
                             ':j_id127:fieldSet:1:j_id142:j_id143:radioSelectFieldId:1'
+
 
 # Form submitting steps
 NEXT_BUTTON = 'xpath://*[@id="j_id0:advRegTemplate:j_id121"]/div[1]/div[4]/div '
