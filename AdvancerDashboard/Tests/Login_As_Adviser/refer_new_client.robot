@@ -16,7 +16,7 @@ Test Teardown     close browser
 Test No 3 - Refer New Client - Introducing
     [Documentation]   Refer a new client with option Introducing.
     ...    Check if a new client was created properly, with introducing investment
-    [Tags]
+    [Tags]    Test No 3
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     ${initial_number_of_clients}=    get element count    class:panel-heading
     ReferNewClient.Click Refer New Client
@@ -38,7 +38,7 @@ Test No 4 - Refer New Client - Advising
     [Documentation]    Refer a new client with option Advising.
     ...    Check if a new client was created properly with advising investment.
 
-    [Tags]
+    [Tags]  Test No 4
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     ${initial_number_of_clients}=    get element count    class:panel-heading
     ReferNewClient.Click Refer New Client
@@ -55,7 +55,7 @@ Test no 5 - Refer New Client - Validation Check
     [Documentation]    Refer a new client with the option Introducing.
      ...    Fill the forms with incorrect data and check validation in form for
      ...    referring new client.
-     [Tags]
+     [Tags]    Test no 5
      DashboardDropdownMenu.Wait Untill Dashboard Loads
      ReferNewClient.Click Refer New Client
      ReferNewClient.Complete New Client Form (new_client)    ${NEW_CLIENT_INCORRECT_DATA}
@@ -71,7 +71,7 @@ Test No 6 -Refer New Client - Advising Validation Check
     [Documentation]    Refer a new client with option Advising.
     ...    Fill the forms with incorrect data and check validation in form for
     ...    referring new client - Advising.
-    [Tags]
+    [Tags]    Test No 6
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     ReferNewClient.Click Refer New Client
     ReferNewClient.Complete New Client Form (new_client)    ${NEW_CLIENT_3}

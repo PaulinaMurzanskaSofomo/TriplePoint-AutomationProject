@@ -17,7 +17,7 @@ Test Teardown     close browser
 Test No 7 - New Investment - Introducing
     [Documentation]    Add new investment for an existing client -
     ...    Introducing. Check if new investment has been created properly.
-    [Tags]    robot:skip
+    [Tags]    Test No 7
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     NewInvestment.Find Existing Client
     NewInvestment.Click Add New Investment
@@ -31,7 +31,7 @@ Test No 8 - New Investment - Advising
     [Documentation]    Add new investment for an existing client - Advising
      ...    (few scenarios with different values). Check if new investment has been
      ...    created properly.
-    [Tags]    robot:skip
+    [Tags]    Test No 8
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     NewInvestment.Find Existing Client
     NewInvestment.Click Add New Investment
@@ -44,7 +44,8 @@ Test No 8 - New Investment - Advising
 Test No 9 - New Investment - Advising - Validation Check
     [Documentation]    Fill the forms with incorrect data and check validation in
     ...    form for adding new investment for an existing client - Advising.
-    [Tags]
+    [Tags]    Test No 9
+
     DashboardDropdownMenu.Wait Untill Dashboard Loads
     NewInvestment.Find Existing Client
     NewInvestment.Click Add New Investment
